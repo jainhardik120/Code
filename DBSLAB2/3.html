@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Translate Function</h2>
+<p id="demo"></p>
+<script>
+function translate(a) {
+var i;
+let str = '';
+  for(i=0; i<a.length; i++){
+	if(a.charAt(i)=='a'||a.charAt(i)=='e'||a.charAt(i)=='i'||a.charAt(i)=='o'||a.charAt(i)=='u'||a.charAt(i)=='A'||a.charAt(i)=='E'||a.charAt(i)=='I'||a.charAt(i)=='O'||a.charAt(i)=='U'){
+		str = str + a.charAt(i);
+	} else if(a.charAt(i)!=' ') {
+		str = str + a.charAt(i);
+		str = str + 'o';
+		str = str + a.charAt(i);
+	} else {
+		str = str + a.charAt(i);
+	}
+  }
+return str;
+}
+document.getElementById("demo").innerHTML = translate('this is fun');
+</script>
+</body>
+</html>

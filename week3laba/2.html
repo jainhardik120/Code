@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Natural numbers</title>
+</head>
+<script>
+ function validateform(){
+    var marks1 = parseInt(document.form.marks1.value);
+    var marks2 = parseInt(document.form.marks2.value);
+    var marks3 = parseInt(document.form.marks3.value);
+    var marks4 = parseInt(document.form.marks4.value);
+    var marks5 = parseInt(document.form.marks5.value);
+    var total = marks1+marks2+marks3+marks4+marks5;
+    if(total<30){
+        alert("Grade is F");
+    } else if(total>=30 && total<40){
+        alert("Grade is D");
+    } else if(total>=40 && total<50){
+        alert("Grade is C");
+    } else if(total>=50 && total<60){
+        alert("Grade is B");
+    } else if(total>=60 && total<80){
+        alert("Grade is A");
+    } else {
+        alert("Grade is A+");
+    }
+}
+</script>
+
+<body>
+    <form name="form" onsubmit="return validateform()">
+        Marks 1: <input type="number" name="marks1" max="20" value="10"><br><br>
+        Marks 2: <input type="number" name="marks2" max="20" value="10"><br><br>
+        Marks 3: <input type="number" name="marks3" max="20" value="10"><br><br>
+        Marks 4: <input type="number" name="marks4" max="20" value="10"><br><br>
+        Marks 5: <input type="number" name="marks5" max="20" value="10"><br><br>
+        <input type="submit" value="Submit Marks">
+    </form>
+    <p id="Result"></p>
+
+</body>
+
+</html>

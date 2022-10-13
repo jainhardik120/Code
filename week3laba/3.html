@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Question 1</title>
+</head>
+<script>
+ function validateform(){
+    var price1 = parseInt(document.form.price1.value);
+    var price2 = parseInt(document.form.price2.value);
+    var price3 = parseInt(document.form.price3.value);
+    var price4 = parseInt(document.form.price4.value);
+    var price5 = parseInt(document.form.price5.value);
+    var quantity1 = parseInt(document.form.quantity1.value);
+    var quantity2 = parseInt(document.form.quantity2.value);
+    var quantity3 = parseInt(document.form.quantity3.value);
+    var quantity4 = parseInt(document.form.quantity4.value);
+    var quantity5 = parseInt(document.form.quantity5.value);
+    var total = (price1*quantity1) + (price2*quantity2) + (price3*quantity3) + (price4*quantity4) + (price5*quantity5);
+    var discount;
+    if(total<=100){
+        discount = 10;
+    } else if(total>100 && total <150){
+        discount = 20;
+    } else if(total>149 && total <200){
+        discount = 25;
+    } else if(total>199 && total <250){
+        discount = 50;
+    }
+    var finalAmount = total - (total*discount/100);
+    alert("Total amount is: " + total + "\nFinal amount is: " + finalAmount);
+}
+</script>
+
+<body>
+    <form name="form" onsubmit="return validateform()">
+        Price 1: <input type="number" name="price1" value="20"> Quantity 1: <input type="number" name="quantity1" max="5"><br><br>
+        Price 2: <input type="number" name="price2" value="20"> Quantity 2: <input type="number" name="quantity2" max="5"><br><br>
+        Price 3: <input type="number" name="price3" value="20"> Quantity 3: <input type="number" name="quantity3" max="5"><br><br>
+        Price 4: <input type="number" name="price4" value="20"> Quantity 4: <input type="number" name="quantity4" max="5"><br><br>
+        Price 5: <input type="number" name="price5" value="20"> Quantity 5: <input type="number" name="quantity5" max="5"><br><br>
+        <input type="submit" value="Calculate">
+    </form>
+
+</body>
+
+</html>

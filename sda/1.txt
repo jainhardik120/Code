@@ -1,0 +1,5 @@
+SELECT P.color, C.cost FROM SUPPLIER S, CATALOG C, PARTS P WHERE P.pid=C.pid AND S.sid=C.sid AND S.sname= "John";
+
+SELECT P.pname FROM Parts P , Catalog C Where P.pid=C.pid HAVING MAX(C.cost);
+
+UPDATE B SET B.Bonus_Amount = 1.1*B.Bonus_Amount FROM Bonus B JOIN Worker W ON B.WORKER_REF_D=W.Worker_ID WHERE W.Department = 'CSE';

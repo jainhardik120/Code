@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Starbucks, Inc.</h2>
+<script>
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const type = [];
+const size = [];
+const types = ["Latte", "Cappucino", "Frappucino"];
+const sizes = ["Tall", "Grande", "Venti"];
+	alert ("Welcome to Starbucks! I'm your starbucks assistant and I will help you create your weekly starbucks coffee schedule");
+	alert ("To start we need to know what your coffee preferences are for each day of the week. Let's start with");
+	let alertMsg = "The following coffee selections will be delivered\nto your home or office. Thank you for choosing starbucks!";
+	for(var w = 0; w<7;w++){
+		type[w] = prompt(days[w] + ": Would you prefer a Latte, a Cappucino, or a Frappucino?\nPlease type 1 for a Latte, 2 for a Cappuccino, or 3 for a Frappucino", "");
+		size[w] = prompt("What size coffee would you like?\nPlease select 1 for a Tall, 2 for a Grande, or 3 for Venti", "");
+		alertMsg = alertMsg + "\n" + days[w] + ": " + sizes[size[w]-1] + " " + types[type[w]-1];
+	}
+	alert (alertMsg);
+</script>
+</body>
+</html>

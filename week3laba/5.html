@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Food Order</title>
+</head>
+<script>
+function validateform(){
+var q1 = parseInt(document.form.quantity1.value);
+var q2 = parseInt(document.form.quantity2.value);
+var q3 = parseInt(document.form.quantity3.value);
+var q4 = parseInt(document.form.quantity4.value);
+var q5 = parseInt(document.form.quantity5.value);
+var total = q1+q2+q3+q4+q5;
+var priceTotal = (q1*100) + (q2*200) + (q3*170) + (q4*100) + (q5*250);
+var name = document.form.customer_name.value;
+var num = document.form.customer_phno.value;
+var address = document.form.customer_address.value;
+for(var i = 0; i<name.length; i++){
+	if(!((name.charAt(i)>='a'&&name.charAt(i)<='z')||(name.charAt(i)>='A'&&name.charAt(i)<='Z')||(name.charAt(i)==' '))){
+		alert("Name invalid");
+		return;
+	}
+}
+if(num.length!=10){
+	alert("Number not 10 digit");
+	return;
+}
+if(total<=0){
+	alert("No item selected");
+	return;
+}
+var discount = 0;
+if(total>5){discount=10;} else if(total>10){discount=15;}
+var finalBillAmt = priceTotal*(100-discount)/100;
+alert("Food Ordered Successfully\n"+"Number of total items ordered are: " + total + "\nDiscount applicable:" + discount + "%" + "\nFinal bill amount is Rs." + finalBillAmt);
+}
+</script>
+<body>
+<h2 style="color:red; font-family:sans-serif;" align="center">Welcome to our Platform</h2>
+<form name="form" onsubmit="validateform()">
+<hr>
+<h4 style="font-family:sans-serif;" >Margeritta Pizza : Rs. 100.00</h4> <img src="./OIP.jfif" width="100dp">
+Quantity: 
+<input type="number" name="quantity1" value="0">
+<hr>
+<h4 style="font-family:sans-serif;" >Cheese Pizza : Rs. 200.00</h4> <img src="./OIP.jfif" width="100dp">
+Quantity: 
+<input type="number" name="quantity2" value="0">
+<hr>
+<h4 style="font-family:sans-serif;" >Veggies Pizza : Rs. 170.00</h4> <img src="./OIP.jfif" width="100dp">
+Quantity: 
+<input type="number" name="quantity3" value="0">
+<hr>
+<h4 style="font-family:sans-serif;" >Mushroom Pizza : Rs. 100.00</h4> <img src="./OIP.jfif" width="100dp">
+Quantity: 
+<input type="number" name="quantity4" value="0">
+<hr>
+<h4 style="font-family:sans-serif;" >Chicken Pizza : Rs. 250.00</h4> <img src="./OIP.jfif" width="100dp">
+Quantity: 
+<input type="number" name="quantity5" value="0">
+<hr>
+<h3 style="font-family:sans-serif;" > Enter your details: </h3>
+Name: <input type="text" name="customer_name">
+<br><br>
+Phone Number: <input type="text" name="customer_phno">
+<br><br>
+Address: <input type="text" name="customer_address">
+<br><br>
+<input type="submit" value="Order">
+</form>
+</body>
+</html>
