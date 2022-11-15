@@ -3,16 +3,16 @@ using namespace std;
 
 struct node{
     int val;
-    node* lchild;
-    node* rchild;
+    node* left;
+    node* right;
     node(int x){
         val = x;
-        lchild = NULL;
-        rchild = NULL;
+        left = NULL;
+        right = NULL;
     }
     node(){
-        lchild = NULL;
-        rchild = NULL;
+        left = NULL;
+        right = NULL;
     }
 };
 
@@ -39,17 +39,17 @@ node* search(node*root, int val){
         return root;
     }
     if(root->val>val){
-        return search(root->lchild, val);
+        return search(root->left, val);
     }
     if(root->val<val){
-        return search(root->rchild, val);
+        return search(root->right, val);
     }
     return NULL;
 }
 
 node* deleteInBST(node* root, int val){
     if(val<root->val){
-        root->lchild = deleteInBST(root->lchild, val);
+        root->left = deleteInBST(root->left, val);
     }
 
 }
@@ -60,22 +60,22 @@ void insert(node*&root, int val){
         return;
     }
     if(val>root->val){
-        insert(root->rchild, val);
+        insert(root->right, val);
         return;
     }
     if(val<root->val){
-        insert(root->lchild, val);
+        insert(root->left, val);
         return;
     }
 }
 
-void inorder(node* root){
+void inOrder(node* root){
     if(root==NULL){
         return;
     }
-    inorder(root->lchild);
+    inOrder(root->left);
     cout << root->val << " ";
-    inorder(root->rchild);
+    inOrder(root->right);
 }
 
 int main()
@@ -88,12 +88,12 @@ int main()
     insert(root, 70);
     insert(root, 60);
     insert(root, 80);
-    inorder(root);
+    inOrder(root);
     cout << "\n";
     node* searched = search(root, 30);
-    inorder(searched->lchild);
+    inOrder(searched->left);
     cout << "\n";
-    inorder(searched->rchild);
+    inOrder(searched->right);
     cout << "\n";
     return 0;
 }

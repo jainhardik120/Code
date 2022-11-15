@@ -1,85 +1,75 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-struct node {
+struct node
+{
     int key;
     struct node *left, *right;
 };
 
-struct node* newNode(int item)
+struct node *newNode(int item)
 {
-    struct node* temp
-        = (struct node*)malloc(sizeof(struct node));
+    struct node *temp = (struct node *)malloc(sizeof(struct node));
     temp->key = item;
     temp->left = temp->right = NULL;
     return temp;
 }
 
-void inorder(struct node* root)
+void inOrder(struct node *root)
 {
-    if (root != NULL) {
-        inorder(root->left);
+    if (root != NULL)
+    {
+        inOrder(root->left);
         cout << root->key << " ";
-        inorder(root->right);
+        inOrder(root->right);
     }
 }
 
-struct node* insert(struct node* node, int key)
+struct node *insert(struct node *node, int key)
 {
-
     if (node == NULL)
         return newNode(key);
-
     if (key < node->key)
         node->left = insert(node->left, key);
     else
         node->right = insert(node->right, key);
-
     return node;
 }
 
-struct node* minValueNode(struct node* node)
+struct node *minValueNode(struct node *node)
 {
-    struct node* current = node;
-
+    struct node *current = node;
     while (current && current->left != NULL)
         current = current->left;
-
     return current;
 }
 
-struct node* deleteNode(struct node* root, int key)
+struct node *deleteNode(struct node *root, int key)
 {
-
     if (root == NULL)
         return root;
-
     if (key < root->key)
         root->left = deleteNode(root->left, key);
-
     else if (key > root->key)
         root->right = deleteNode(root->right, key);
-
-    else {
-
-        if (root->left==NULL and root->right==NULL)
+    else
+    {
+        if (root->left == NULL and root->right == NULL)
             return NULL;
-
-        else if (root->left == NULL) {
-            struct node* temp = root->right;
+        else if (root->left == NULL)
+        {
+            struct node *temp = root->right;
             free(root);
             return temp;
         }
-        else if (root->right == NULL) {
-            struct node* temp = root->left;
+        else if (root->right == NULL)
+        {
+            struct node *temp = root->left;
             free(root);
             return temp;
         }
-
-        struct node* temp = minValueNode(root->right);
-
+        struct node *temp = minValueNode(root->right);
         root->key = temp->key;
-
         root->right = deleteNode(root->right, temp->key);
     }
     return root;
@@ -87,8 +77,7 @@ struct node* deleteNode(struct node* root, int key)
 
 int main()
 {
-
-    struct node* root = NULL;
+    struct node *root = NULL;
     root = insert(root, 50);
     root = insert(root, 30);
     root = insert(root, 20);
@@ -96,24 +85,27 @@ int main()
     root = insert(root, 70);
     root = insert(root, 60);
     root = insert(root, 80);
-
+    root = insert(root, 75);
+    root = insert(root, 55);
+    root = insert(root, 65);
+    root = insert(root, 10);
+    root = insert(root, 15);
+    root = insert(root, 25);
+    root = insert(root, 95);
+    root = insert(root, 85);
     cout << "Inorder traversal of the given tree \n";
-    inorder(root);
-
+    inOrder(root);
     cout << "\nDelete 20\n";
     root = deleteNode(root, 20);
     cout << "Inorder traversal of the modified tree \n";
-    inorder(root);
-
+    inOrder(root);
     cout << "\nDelete 30\n";
     root = deleteNode(root, 30);
     cout << "Inorder traversal of the modified tree \n";
-    inorder(root);
-
+    inOrder(root);
     cout << "\nDelete 50\n";
     root = deleteNode(root, 50);
     cout << "Inorder traversal of the modified tree \n";
-    inorder(root);
-
+    inOrder(root);
     return 0;
 }

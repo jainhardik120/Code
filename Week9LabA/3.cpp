@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-
 struct node
 {
     char info;
@@ -8,7 +7,6 @@ struct node
     struct node *nxt;
 };
 struct node *head = NULL;
-
 struct node *newnode(char data)
 {
     struct node *node = (struct node *)malloc(sizeof(struct node));
@@ -24,15 +22,11 @@ void Inorder(struct node *node)
         return;
     else
     {
-
         Inorder(node->l);
-
         printf("%c ", node->info);
-
         Inorder(node->r);
     }
 }
-
 void push(struct node *x)
 {
     if (head == NULL)
@@ -45,7 +39,6 @@ void push(struct node *x)
 }
 struct node *pop()
 {
-
     struct node *n = head;
     head = head->nxt;
     return n;
@@ -58,7 +51,6 @@ int main()
     struct node *p, *q, *s;
     for (i = 0; i < n; i++)
     {
-
         if (t[i] == '+' || t[i] == '-' || t[i] == '*' || t[i] == '/' || t[i] == '^')
         {
             s = newnode(t[i]);

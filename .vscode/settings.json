@@ -1,7 +1,35 @@
 {
     "files.associations": {
         "iostream": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "atomic": "cpp",
+        "charconv": "cpp",
+        "chrono": "cpp",
+        "filesystem": "cpp",
+        "format": "cpp",
+        "forward_list": "cpp",
+        "iosfwd": "cpp",
+        "istream": "cpp",
+        "list": "cpp",
+        "numeric": "cpp",
+        "random": "cpp",
+        "ratio": "cpp",
+        "regex": "cpp",
+        "sstream": "cpp",
+        "string": "cpp",
+        "type_traits": "cpp",
+        "valarray": "cpp",
+        "vector": "cpp",
+        "xiosbase": "cpp",
+        "xlocale": "cpp",
+        "xlocinfo": "cpp",
+        "xlocmon": "cpp",
+        "xlocnum": "cpp",
+        "xloctime": "cpp",
+        "xmemory": "cpp",
+        "xstring": "cpp",
+        "xtree": "cpp",
+        "xutility": "cpp"
     },
     "editor.acceptSuggestionOnEnter": "on"
 }

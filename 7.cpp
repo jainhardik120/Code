@@ -26,12 +26,14 @@ void rearrangeStack(stack<int> &st, int *arr, int n)
 int main()
 {
     stack<int> st;
+    
     st.push(6);
     st.push(4);
     st.push(1);
     st.push(2);
     st.push(5);
     st.push(3);
+    
     int arr[] = {2, 5, 6, 3, 1, 4};
     rearrangeStack(st, arr, 6);
     while (!st.empty())

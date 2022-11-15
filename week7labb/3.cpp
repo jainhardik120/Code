@@ -28,6 +28,19 @@ void partition(int *arr, int n, int a, int b){
 
 int main()
 {
-
+    int n;
+    cin >> n;
+    int *arr = new int[n];
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+    int a,b;
+    cin >> a >> b;
+    partition(arr, n, a,b);
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
     return 0;
 }

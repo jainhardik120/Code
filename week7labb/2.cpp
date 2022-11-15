@@ -3,15 +3,15 @@ using namespace std;
 
 bool isPossible(int arr[], int n, int m, int curr_min)
 {
-    int studentsRequired = 1;
+    int paintersRequired = 1;
     int curr_sum = 0;
     for (int i = 0; i < n; i++) {
         if (arr[i] > curr_min)
             return false;
         if (curr_sum + arr[i] > curr_min) {
-            studentsRequired++;
+            paintersRequired++;
             curr_sum = arr[i];
-            if (studentsRequired > m)
+            if (paintersRequired > m)
                 return false;
         }
         else
@@ -20,7 +20,7 @@ bool isPossible(int arr[], int n, int m, int curr_min)
     return true;
 }
 
-int findPages(int arr[], int n, int m)
+int findTime(int arr[], int n, int m)
 {
     long long sum = 0;
     if (n < m)
@@ -48,6 +48,6 @@ int main()
     int m = 3;
 
     cout << "Minimum number = "
-         << findPages(arr, n, m) << endl;
+         << findTime(arr, n, m) << endl;
     return 0;
 }

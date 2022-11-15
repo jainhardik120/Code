@@ -1,0 +1,34 @@
+                                                            realme
+                                                          Tax Invoice
+
+REALME MOBILE                                                                Invoice Number: 0003
+TELECOMMUNICATIONS (INDIA)                                                   Sun Jan 09 16:59:04 2022
+
+Pvt. Ltd.                                                                    Palak Jain
+
+Regd. Add: 3rd Floor, Tower B                                                256/A
+Building No. 8, DLF Cyber City, Phase II                                     Shastri Nagar
+Gurgaon-122002                                                               Delhi
+
+Contact No: 01246719500                                                      Contact No: 1234567891
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+S.No.           Name               Barcode       Quantity   Unit Price   Taxable Amount   Tax Rate      Taxes      Total Amount
+   01       realme narzo 50A        B09FK8MBMJ        004     25999.00       0103996.00      15.00   15599.40        0119595.40
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+Total Amount in Words:                                                                            Taxable Amount    00103996.00
+One Lakh Nineteen Thousand Five Hundred Ninety Five Rupees Only                                   Total Taxes       00015599.40
+
+                                                                                                  Grand Total       00119595.40
+
+                                                                                                  REALME MOBILE
+                                                                                                  TELECOMMUNICATIONS (INDIA)
+                                                                                                  Pvt. Ltd.
+
+
+
+
+                                                                                                  Authorised Signatory

@@ -1,0 +1,20 @@
+DELIMITER $$ 
+CREATE PROCEDURE WhileLoopExample() 
+BEGIN 
+	DECLARE x INT; 
+	DECLARE str VARCHAR(255); 
+
+	SET x = 1; 
+	SET str = ‘ '; 
+ 
+	WHILE  x<=10 DO
+ 		IF (x mod 2) THEN 
+			SET x = x + 1;
+		ELSE 
+			SET str = CONCAT(str,x,','); 
+			SET x = x + 1;
+		END IF; 
+	END WHILE; 
+	SELECT str; 
+END$$ 
+DELIMITER ;

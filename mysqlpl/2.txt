@@ -1,0 +1,13 @@
+DELIMITER $$
+CREATE FUNCTION PrintHello(x INTEGER)
+BEGIN
+    DECLARE y INTEGER;
+    SET y = 0;
+    PrintLoop: PrintLoop
+        IF (y > x) THEN 
+            LEAVE PrintLoop;
+        END IF;
+        SET y = y+1;
+    dbms_output.put_line('Hello World\n'); 
+END$$
+DELIMITER ;

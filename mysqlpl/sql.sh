@@ -1,0 +1,13 @@
+DELIMITER $$
+CREATE FUNCTION LargestNumber(a INTEGER, b INTEGER, c INTEGER, d INTEGER)
+RETURNS INTEGER
+DETERMINISTIC
+BEGIN
+    DECLARE Output INTEGER;
+    Output = a;
+    IF (b > Output) THEN
+        Output = b;
+    END IF;
+    RETURN (Output);
+END $$
+DELIMITER;

@@ -1,0 +1,33 @@
+                                                            realme
+                                                          Tax Invoice
+
+REALME MOBILE                                                                Invoice Number: 0001
+TELECOMMUNICATIONS (INDIA)                                                   Wed Nov 16 00:01:41 2022
+
+Pvt. Ltd.                                                                    hardik jain
+
+Regd. Add: 3rd Floor, Tower B                                                djfkla
+Building No. 8, DLF Cyber City, Phase II                                     fahdsj
+Gurgaon-122002                                                               hjflkas
+
+Contact No: 01246719500                                                      Contact No: 7983121194
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+S.No.           Name               Barcode       Quantity   Unit Price   Taxable Amount   Tax Rate      Taxes      Total Amount
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+Total Amount in Words:                                                                            Taxable Amount    00000000.00
+Rupees Only                                                                                       Total Taxes       00000000.00
+
+                                                                                                  Grand Total       00000000.00
+
+                                                                                                  REALME MOBILE
+                                                                                                  TELECOMMUNICATIONS (INDIA)
+                                                                                                  Pvt. Ltd.
+
+
+
+
+                                                                                                  Authorised Signatory

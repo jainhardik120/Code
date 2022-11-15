@@ -21,12 +21,12 @@ struct node* newNode(int item)
 
 // A utility function to do
 // inorder traversal of BST
-void inorder(struct node* root)
+void inOrder(struct node* root)
 {
 	if (root != NULL) {
-		inorder(root->left);
+		inOrder(root->left);
 		cout << root->key << " ";
-		inorder(root->right);
+		inOrder(root->right);
 	}
 }
 
@@ -134,22 +134,22 @@ int main()
 	root = insert(root, 80);
 
 	cout << "Inorder traversal of the given tree \n";
-	inorder(root);
+	inOrder(root);
 
 	cout << "\nDelete 20\n";
 	root = deleteNode(root, 20);
 	cout << "Inorder traversal of the modified tree \n";
-	inorder(root);
+	inOrder(root);
 
 	cout << "\nDelete 30\n";
 	root = deleteNode(root, 30);
 	cout << "Inorder traversal of the modified tree \n";
-	inorder(root);
+	inOrder(root);
 
 	cout << "\nDelete 50\n";
 	root = deleteNode(root, 50);
 	cout << "Inorder traversal of the modified tree \n";
-	inorder(root);
+	inOrder(root);
 
 	return 0;
 }

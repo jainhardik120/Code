@@ -1,0 +1,35 @@
+                                                            realme
+                                                          Tax Invoice
+
+REALME MOBILE                                                                Invoice Number: 0002
+TELECOMMUNICATIONS (INDIA)                                                   Sun Dec 26 21:32:08 2021
+
+Pvt. Ltd.                                                                    sanchit jain
+
+Regd. Add: 3rd Floor, Tower B                                                IDK
+Building No. 8, DLF Cyber City, Phase II                                     IDK
+Gurgaon-122002                                                               IDK
+
+Contact No: 01246719500                                                      Contact No: 1234567891
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+S.No.           Name               Barcode       Quantity   Unit Price   Taxable Amount   Tax Rate      Taxes      Total Amount
+   01       realme narzo 50A        B09FK8MBMJ        002     12499.00       0024998.00      18.00   04499.64        0029497.64
+   02       realme narzo 50i        B09FKB3446        002     08999.00       0017998.00      12.00   02159.76        0020157.76
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+Total Amount in Words:                                                                            Taxable Amount    00042996.00
+Forty Nine Thousand Six Hundred Fifty Five Rupees Only                                            Total Taxes       00006659.40
+
+                                                                                                  Grand Total       00049655.40
+
+                                                                                                  REALME MOBILE
+                                                                                                  TELECOMMUNICATIONS (INDIA)
+                                                                                                  Pvt. Ltd.
+
+
+
+
+                                                                                                  Authorised Signatory
