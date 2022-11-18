@@ -18,6 +18,7 @@ struct node *newnode(char data)
 }
 void Inorder(struct node *node)
 {
+    
     if (node == NULL)
         return;
     else
