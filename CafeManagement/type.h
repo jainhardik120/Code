@@ -31,6 +31,10 @@ struct orderItem
         this->quantity = quantity;
         this->next = NULL;
     }
+    orderItem()
+    {
+        this->next = NULL;
+    }
 };
 
 struct order
@@ -42,10 +46,3 @@ struct order
     float total;
     int orderStatus;
 };
-
-// status 1 for queued
-// 2 preparing
-// 3 for prepared
-// 4 received by customer
-// 5 can't prepare // cancelled
-

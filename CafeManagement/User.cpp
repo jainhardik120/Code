@@ -223,10 +223,10 @@ void printOrderSummary(order *od)
     orderItem *temp = od->headItem;
     while (temp != NULL)
     {
-        printf("%-20s  %02d  %07.2f\n", itemsInMenu[temp->ind]->name, temp->quantity, (temp->quantity * itemsInMenu[temp->ind]->price));
+        printf("%-20s  %-20s  %02d  %07.2f\n", itemsInMenu[temp->ind]->name, itemsInMenu[temp->ind]->size, temp->quantity, (temp->quantity * itemsInMenu[temp->ind]->price));
         temp = temp->next;
     }
-    printf("\n%.*s%07.2f\n", 26, blankSpaces, od->total);
+    printf("\n%.*s%07.2f\n", 48, blankSpaces, od->total);
 }
 
 void addToOrdersQueue(order *&od)
