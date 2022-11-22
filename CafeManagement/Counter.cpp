@@ -5,6 +5,7 @@
 #include <string.h>
 #include <cstring>
 #include <time.h>
+#include <queue>
 #include "type.h"
 using namespace std;
 

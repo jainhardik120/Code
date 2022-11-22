@@ -7,11 +7,10 @@ using namespace std;
 int main()
 {
     foodItem fi[2];
-    ofstream wf("menu.dat", ios::binary);
+    ofstream wf("new/menu.dat", ios::binary);
     for (int i = 0; i < 2; i++)
     {
         fi[i].itemId = i+1;
-        cin >> fi[i].name;
         fi[i].isAvailable = true;
         fi[i].isPackaged = false;
         fi[i].quantityAvailable = -1;
@@ -23,7 +22,6 @@ int main()
     for (int i = 0; i < 2; i++)
     {
         fi2[i].itemId = i+1+2;
-        cin >> fi2[i].name;
         fi2[i].isAvailable = true;
         fi2[i].isPackaged = true;
         fi2[i].quantityAvailable = 10;

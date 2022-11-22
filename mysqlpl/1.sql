@@ -14,6 +14,7 @@ BEGIN
     IF (d > Output) THEN
         SET Output = d;
     END IF;
+    SELECT Output;
     RETURN (Output);
 END$$
 DELIMITER ;
