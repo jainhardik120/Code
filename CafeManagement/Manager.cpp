@@ -235,7 +235,7 @@ int addNewMenuItem()
     int tempId;
     cout << "Enter new product name: ";
     fflush(stdin);
-    gets(temp->name);
+    cin.getline(temp->name, 20);
     cout << "Enter id for new product: ";
     while (1)
     {
@@ -254,7 +254,7 @@ int addNewMenuItem()
     }
     cout << "Enter new product size: ";
     fflush(stdin);
-    gets(temp->size);
+    cin.getline(temp->size, 20);
     cout << "Enter new product price: ";
     cin >> temp->price;
     int tempType;
@@ -333,6 +333,29 @@ int addNewMenuItem()
     return 1;
 }
 
+int viewOrders()
+{
+    system("cls");
+    char fileName[14];
+    int date;
+    cout << "Enter date (DDMMYYYY): ";
+    cin >> date;
+    sprintf(fileName, "%d.dat", date);
+    fstream file(fileName, ios::in | ios::out | ios::binary);
+    file.seekg(0, ios::end);
+    int ordersCount = (file.tellg() / sizeof(order));
+    file.seekg(0, ios::beg);
+    order *temp = new order();
+    cout << "\n   ID       Time       Total\n";
+    for (int i = 0; i < ordersCount; i++)
+    {
+        file.read((char *)temp, sizeof(order));
+        tm *ptm = localtime(&temp->time);
+        printf("  %04d    %02d:%02d:%02d    %07.2f\n", temp->orderId, ptm->tm_hour, ptm->tm_min, ptm->tm_sec, temp->total);
+    }
+    return 1;
+}
+
 int mainMenu()
 {
     system("cls");
@@ -343,7 +366,8 @@ int mainMenu()
     printf("B. Update Quantities\n");
     printf("C. Change Availability Status\n");
     printf("D. Add New Menu Item\n");
-    printf("Choose from A-D: ");
+    printf("E. View orders of day\n");
+    printf("Choose from A-E: ");
     fflush(stdin);
     scanf("%c", &choice);
     if (choice > 90)
@@ -367,6 +391,9 @@ int mainMenu()
         break;
     case 'D':
         return addNewMenuItem();
+        break;
+    case 'E':
+        return viewOrders();
         break;
     default:
         break;
