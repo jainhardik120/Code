@@ -342,10 +342,22 @@ int viewOrders()
     cin >> date;
     sprintf(fileName, "%d.dat", date);
     fstream file(fileName, ios::in | ios::out | ios::binary);
-    file.seekg(0, ios::end);
-    int ordersCount = (file.tellg() / sizeof(order));
-    file.seekg(0, ios::beg);
+    int ordersCount;
+    if (file)
+    {
+        file.seekg(0, ios::end);
+        ordersCount = (file.tellg() / sizeof(order));
+    }
+    else
+    {
+        ordersCount = 0;
+    }
+    if (ordersCount < 0)
+    {
+        ordersCount = 0;
+    }
     order *temp = new order();
+    file.seekg(0, ios::beg);
     cout << "\n   ID       Time       Total\n";
     for (int i = 0; i < ordersCount; i++)
     {
@@ -403,6 +415,7 @@ int mainMenu()
 
 int main()
 {
+    readMenuFile();
     while (1)
     {
         int returnValue = mainMenu();
