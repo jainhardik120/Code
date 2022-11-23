@@ -2,11 +2,8 @@
 #include <conio.h>
 #include <fstream>
 #include <vector>
-#include <string.h>
-#include <cstring>
 #include <time.h>
-#include <queue>
-#include "type.h"
+#include "type.hpp"
 using namespace std;
 
 vector<int> pendingOrders;
@@ -48,34 +45,21 @@ int refreshList()
     return 1;
 }
 
-void updateOrderAt(int orderId){
+void updateOrderAt(int orderId)
+{
     char fileName[14];
     time_t timeNow;
     time(&timeNow);
     tm *ptm = localtime(&timeNow);
     sprintf(fileName, "%02d%02d%04d.dat", ptm->tm_mday, ptm->tm_mon + 1, 1900 + ptm->tm_year);
     fstream file(fileName, ios::in | ios::out | ios::binary);
-    if (!file)
-    {
-        cout << "Sorry, couldn\'t find this order\n";
-        return 1;
-    }
-    file.seekg(0, ios::end);
-    int orderCount = (file.tellg() / sizeof(order));
-    file.seekg(0, ios::beg);
-    if (orderCount < 0)
-    {
-        orderCount = 0;
-    }
-    if (n > orderCount)
-    {
-        cout << "Sorry, couldn\'t find this order\n";
-        return 1;
-    }
-    file.seekg((n - 1) * (sizeof(order)), ios::beg);
+    file.seekg((orderId - 1) * (sizeof(order)), ios::beg);
     order *od = new order();
     file.read((char *)od, sizeof(order));
-
+    od->orderStatus = 4;
+    file.seekp((orderId - 1) * (sizeof(order)), ios::beg);
+    file.write((char *)od, sizeof(order));
+    file.close();
 }
 
 int mainMenu()

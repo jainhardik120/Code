@@ -6,7 +6,7 @@
 #include <cstring>
 #include <cstdio>
 #include <time.h>
-#include "type.h"
+#include "type.hpp"
 using namespace std;
 
 vector<foodItem *> itemsInMenu;
