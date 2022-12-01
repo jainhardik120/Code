@@ -404,6 +404,8 @@ int placeOrder(order *od)
     sprintf(buf, "%0.2f", od->total);
     toWords(inWords, buf);
     cout << inWords << "\n";
+    // cout << "Pay by scanning the opened QR Code\n";
+    // system("cd C:/Users/Hardik Jain/Downloads/Code/CafeManagement && QR.jpg");
     updateQuantity(od);
     writeMenuFile();
     discardOrder(od);
